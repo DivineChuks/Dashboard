@@ -1,14 +1,12 @@
 import React from 'react'
-import {Box, Typography, InputBase, IconButton, Button} from "@mui/material"
+import {Box, InputBase, Button} from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
-import Sidebar from '../components/Sidebar'
 import Tabledata from '../components/Tabledata'
 
 
 
 
-const CustomerList = (props) => {
-    const {classes} = props
+const CustomerList = () => {
   return (
     <Box sx={{backgroundColor: '#FCFCFC', padding: '2rem 5rem 8rem'}}>
         <Box>

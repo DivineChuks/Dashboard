@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
-import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import "react-pro-sidebar/dist/css/styles.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import Logo from "../assets/Logo.png"
 import footerImage from "../assets/footerImage.png"
@@ -37,7 +34,6 @@ const Item = ({ title, icon }) => {
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [open, setOpen] = useState(false)
 
   return (
     <Box
@@ -124,11 +120,11 @@ const Sidebar = () => {
                 icon={<ContactsOutlinedIcon />}
               />
           
-              {/* <Item
+              <Item
                 title="Analytics"
                 to="/invoices"
                 icon={<ReceiptOutlinedIcon />}
-              /> */}
+              />
           
               <Item
                 title="Notification"
@@ -147,7 +143,7 @@ const Sidebar = () => {
           </Box>
           <Divider />
           <Box display="flex" justifyContent="space-between" sx={{padding: "20px 30px 30px 30px", marginLeft: "15px"}} alignItems="center">
-            <img src={footerImage} style={{width: "30px", height: "30px"}}/>
+            <img src={footerImage} alt="footer" style={{width: "30px", height: "30px"}}/>
             <Typography variant="caption" >Oguelegba Kitchen</Typography>
             <MoreVertIcon />
           </Box>
